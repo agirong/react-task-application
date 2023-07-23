@@ -10,6 +10,7 @@ function App() {
      setTasks(data)
    }, [])
 
+   //función para agregar un elemento 
    function createTask(task){
       setTasks([...tasks,{
          title: task.title,
@@ -18,10 +19,15 @@ function App() {
       }])
    }
 
+   //función para eliminar un elemento 
+   function deleteTask(taskId){
+    setTasks(tasks.filter(task => task.id !==taskId))
+   }
+
   return (
     <>
       <TaskForm createTask={createTask}/>   
-      <TaskList tasks ={tasks}/>
+      <TaskList tasks ={tasks} deleteTask={deleteTask}/>
     </>
   );
 }
