@@ -11,6 +11,8 @@ export function TaskForm({ createTask }) {
         title,
         description
     });
+    setTitle('')
+    setDescription('')
   };
 
   return (
@@ -18,10 +20,13 @@ export function TaskForm({ createTask }) {
       <input
         placeholder="Escribe la tarea"
         onChange={(e) => setTitle(e.target.value)}
+        value={title}
+        autoFocus
       />
       <textarea
         placeholder="Escribe la descripción de la tarea"
         onChange={(e) => setDescription(e.target.value)}
+        value={description}
       ></textarea>
       <button>Guardar</button>
     </form>
