@@ -10,7 +10,8 @@ function TaskForm() {
     e.preventDefault();
 
     //Validar que el titulo y la descripción vengan llenos
-    if (!title.trim() || !description.trim()) { // Verificar si el título está vacío o contiene solo espacios en blanco
+    if (!title.trim() || !description.trim()) {
+      // Verificar si el título está vacío o contiene solo espacios en blanco
       alert("Compos Titulo y Descripción son obligatorios.");
       return; // Detener el envío del formulario si el título está vacío
     }
@@ -40,7 +41,18 @@ function TaskForm() {
           value={description}
           className="bg-slate-300 p-3 w-full mb-2"
         ></textarea>
-        <button className="bg-indigo-500 p-3 py-1 rounded-md text-white">Guardar</button>
+        <select
+          name="select"
+          className="block w-full px-2 py-2 bg-white border mb-2"
+        >
+          <option value="0">Status...</option>
+          <option value="1">ToDo</option>
+          <option value="2">Doing</option>
+          <option value="3">Done</option>
+        </select>
+        <button className="bg-indigo-500 p-3 py-1 rounded-md text-white">
+          Guardar
+        </button>
       </form>
     </div>
   );
