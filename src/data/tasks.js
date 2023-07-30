@@ -9,12 +9,12 @@ export const tasks = [
     id: 1,
     title: "Mi segunda tarea",
     description: "Mi segunda tarea",
-    status:0
+    status:2
   },
   {
     id: 2,
     title: "Mi tercer tarea",
     description: "Mi tercer tarea",
-    status:0
+    status:3
   },
 ];

@@ -14,6 +14,7 @@ export function TaskContextProvider(props) {
         title: task.title,
         id: tasks.length,
         description: task.description,
+        status: task.status
       },
     ]);
   }
