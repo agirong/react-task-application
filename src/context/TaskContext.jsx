@@ -14,6 +14,7 @@ export function TaskContextProvider(props) {
         title: task.title,
         id: tasks.length,
         description: task.description,
+        status: task.status
       },
     ]);
   }
@@ -21,6 +22,15 @@ export function TaskContextProvider(props) {
   //función para eliminar un elemento
   function deleteTask(taskId) {
     setTasks(tasks.filter((task) => task.id !== taskId));
+  }
+
+  //función para editar un elemento. 
+  function editTask(taskId, updatedTaskData) {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, ...updatedTaskData } : task
+      )
+    );
   }
 
   useEffect(() => {
@@ -33,6 +43,7 @@ export function TaskContextProvider(props) {
         tasks,
         deleteTask,
         createTask,
+        editTask
       }}
     >
       {props.children}
