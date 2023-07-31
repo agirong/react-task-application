@@ -31,11 +31,17 @@ function TaskForm({ taskToEdit, setTaskToEdit }) {
     e.preventDefault();
 
     //Validar que el titulo y la descripción vengan llenos
-    if (!title.trim() || !description.trim()) {
+    if (!title.trim()) {
       // Verificar si el título está vacío o contiene solo espacios en blanco
-      alert("Campos Título y Descripción son obligatorios.");
+      alert("Título es obligatorio.");
       return; // Detener el envío del formulario si el título está vacío
     }
+    if (!description.trim()) {
+      // Verificar si el título está vacío o contiene solo espacios en blanco
+      alert("Descripción es obligatoria.");
+      return; // Detener el envío del formulario si el título está vacío
+    }
+
     // Si hay una tarea seleccionada, llamamos a editTask() que esta definida en el Context.jsx
     if (taskToEdit) {
       editTask(taskToEdit.id, { title, description, status });
