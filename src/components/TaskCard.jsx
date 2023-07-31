@@ -22,11 +22,11 @@ function TaskCard({ task, handleSelectTask }) {
         className="rounded-md font-bold"
       >
         {task.status == 1
-          ? "ToDo"
+          ? "⏳ ToDo"
           : task.status == 2
-          ? "Doing"
+          ? " 💻 Doing"
           : task.status == 3
-          ? "Done"
+          ? " ⌛ Done"
           : "Status..."}
       </h3>
       <div className="flex flex-1 justify-between">
@@ -34,7 +34,7 @@ function TaskCard({ task, handleSelectTask }) {
           className="bg-orange-500 px-2 py-1 rounded-md mt-4 hover:bg-orange-300"
           onClick={() => handleSelectTask(task)}
         >
-          Editar Tarea
+          Editar  Tarea
         </button>
         <button
           className="bg-red-500 px-2 py-1 rounded-md mt-4 hover:bg-red-300"
