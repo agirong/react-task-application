@@ -24,6 +24,15 @@ export function TaskContextProvider(props) {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
 
+  //función para editar un elemento. 
+  function editTask(taskId, updatedTaskData) {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, ...updatedTaskData } : task
+      )
+    );
+  }
+
   useEffect(() => {
     setTasks(data);
   }, []);
@@ -34,6 +43,7 @@ export function TaskContextProvider(props) {
         tasks,
         deleteTask,
         createTask,
+        editTask
       }}
     >
       {props.children}

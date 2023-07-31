@@ -1,20 +1,20 @@
 export const tasks = [
   {
     id: 0,
-    title: "Mi primer tarea",
-    description: "Mi primer tarea",
-    status:0
+    title: "Leer",
+    description: "Leer blogs similares",
+    status:3
   },
   {
     id: 1,
-    title: "Mi segunda tarea",
-    description: "Mi segunda tarea",
+    title: "Escribir",
+    description: "Agregar textos nuevos",
     status:2
   },
   {
     id: 2,
-    title: "Mi tercer tarea",
-    description: "Mi tercer tarea",
-    status:3
+    title: "Crear una página",
+    description: "Pasar Datos al Formulario",
+    status:1
   },
 ];
