@@ -26,4 +26,5 @@ declined, etc.
 - Actualizar perdiodicamente las ramas.
 - Comentatios de commit significativos.
   
-
+## Revision de Codigo 
+- Tener en cuenta los lineamientos de Clean Code y Principios SOLID
